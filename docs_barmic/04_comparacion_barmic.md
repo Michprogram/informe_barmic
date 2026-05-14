@@ -1,2 +1,18 @@
-Tabla comparativa de marcos regulatorios por
-industria (mínimo 3 marcos y 3 ejes).
+# Comparación de Marcos Regulatorios
+
+El incidente de Twitch no solo involucró la extracción de código fuente, sino también la exposición de datos financieros de miles de creadores de contenido. Para comprender la gravedad legal de esta filtración, se presenta una tabla comparativa entre la normativa nacional chilena, el estándar europeo de protección de datos y la normativa específica de la industria de medios de pago.
+
+## Tabla Comparativa de Estándares y Legislación
+
+| Eje de Análisis | Ley 19.628 (Chile) | GDPR (Unión Europea) | PCI-DSS (Industria Financiera / Retail) |
+| :--- | :--- | :--- | :--- |
+| **1. Ámbito de Aplicación e Industria** | General. Aplica a cualquier base de datos personales en territorio chileno, público o privado. | General / Tecnológico. Aplica a cualquier empresa que procese datos de ciudadanos europeos, sin importar dónde esté alojada. | Específico. Aplica globalmente a cualquier entidad que almacene, procese o transmita datos de titulares de tarjetas de crédito/débito. |
+| **2. Notificación de Brechas de Seguridad** | **No obligatoria** en la ley actual. Queda a criterio de la empresa o normativas sectoriales secundarias. | **Estricta.** Obligación de notificar a la autoridad de control en un plazo máximo de 72 horas desde el descubrimiento. | **Estricta.** Exige notificación inmediata a las marcas de tarjetas de pago (Visa, Mastercard, etc.) y a los bancos adquirentes. |
+| **3. Obligaciones de Seguridad Técnica** | Genéricas. Exige el "debido cuidado", pero no especifica controles técnicos como cifrado o segmentación de redes. | Basadas en el riesgo. Exige "privacidad por diseño", cifrado de datos y pruebas periódicas de resiliencia de los sistemas. | Altamente prescriptivas. Exige firewalls, autenticación multifactor (MFA), pruebas de penetración (*pentesting*) y segmentación estricta de la red. |
+| **4. Sanciones por Incumplimiento** | Multas de bajo impacto en comparación con estándares internacionales. Indemnización por daño patrimonial o moral. | Multas severas: hasta 20 millones de euros o el 4% del volumen de negocio total anual global del ejercicio financiero anterior. | Sanciones económicas impuestas por los bancos (hasta $100,000 USD mensuales), además de la revocación del derecho a procesar tarjetas. |
+
+## Análisis aplicado al caso Twitch
+
+Bajo el escenario hipotético de que Twitch operara exclusivamente bajo la **Ley 19.628 chilena**, la empresa no habría tenido la obligación legal de notificar la brecha en un plazo estricto de 72 horas, lo que habría dejado a los *streamers* expuestos a fraudes por más tiempo. 
+
+Sin embargo, al procesar suscripciones y pagos, Twitch está sujeta al cumplimiento de **PCI-DSS**. La filtración de sus herramientas de *red teaming* y el acceso no autorizado a sus bases de datos demuestra una falla crítica en la segmentación de su red y en los controles de acceso, lo que constituye una infracción directa a este estándar de la industria, arriesgando su capacidad para seguir operando como plataforma de pagos.
