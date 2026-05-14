@@ -18,4 +18,4 @@ El impacto fue masivo a nivel técnico, reputacional y de privacidad:
 3. **Seguridad Técnica:** Al filtrarse las herramientas del equipo de seguridad interno (*red teaming*), los ciberdelincuentes obtuvieron información sobre cómo Twitch detectaba y mitigaba amenazas, facilitando la planificación de ataques posteriores.
 
 ---
-*Nota metodológica: Para efectos de este análisis legal, se evaluará este incidente planteando el escenario hipotético de que Twitch operara bajo la jurisdicción chilena, aplicando la normativa nacional pertinente.*
+*Para efectos de este análisis legal, se evaluará este incidente planteando el escenario hipotético de que Twitch operara bajo la jurisdicción chilena, aplicando la normativa nacional pertinente.*
