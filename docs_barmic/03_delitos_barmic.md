@@ -22,4 +22,4 @@ Al aplicar la jurisdicción chilena mediante la **Ley 21.459** (que adecúa la l
 * **Justificación:** Este artículo sanciona a quien "conociendo su origen ilícito, comercialice, transfiera, almacene (...) o distribuya datos informáticos". Al publicar el enlace torrent de manera consciente para perjudicar a la empresa y distribuir datos financieros y secretos comerciales robados, el atacante comete este delito directamente.
 
 ---
-*Conclusión de la sección: Bajo la Ley 21.459, el responsable de la filtración de Twitch enfrentaría un concurso de delitos, sumando las penas de acceso ilícito agravado por el robo de información y la posterior distribución masiva de datos obtenidos ilegalmente.*
+*Bajo la Ley 21.459, el responsable de la filtración de Twitch enfrentaría un concurso de delitos, sumando las penas de acceso ilícito agravado por el robo de información y la posterior distribución masiva de datos obtenidos ilegalmente.*
