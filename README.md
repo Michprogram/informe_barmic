@@ -48,12 +48,11 @@ Para ejecutar este proyecto en tu propia computadora:
 1. **Clonar el repositorio:**
    ```bash
    git clone [https://github.com/Michprogram/informe_barmic.git](https://github.com/Michprogram/informe_barmic.git)
+ ## 
+   
 
-
-
-
-
-   ## 👨‍🎓 Información Académica
+   
+👨‍🎓 Información Académica
 
 A continuación se detallan los datos institucionales correspondientes a la entrega de esta evaluación:
 
