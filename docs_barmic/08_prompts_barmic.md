@@ -32,3 +32,6 @@ comparación de marcos regulatorios (criterio 2.1.3).
 24.05
 9. oye mira mi proyecto me gusto bastante pero me gustaria que quedara mas completo y tuviera mas enfasis en el contenido como tal, siendo que tiene muy poca informacion sobre el tema
 10. Ahora me gustaria que mi profesor pudiera ver los prompts que utilice desde la misma aplicacion, podemos agregarlo en alguna parte? 
+11. listo, ahora puedes ayudarme a subirlo a vercel?
+12. y ahora ya tengo el proyecto completo listo, ya en vercel y todo. Pero me gustaria hacer cambio visual, para que sea mas atractivo, y que tenga una aura como de peligro dado la filtracion y todo lo que es la filtracion de datos etc, tambien el tema de streamers y twitch y amazon, como podemos hacerlo que tenga mas visualizacion mas llamativa. 
+
