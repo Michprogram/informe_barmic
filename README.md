@@ -51,14 +51,14 @@ Para ejecutar este proyecto en tu propia computadora:
  ## 
    
 
-   
+
 👨‍🎓 Información Académica
 
 A continuación se detallan los datos institucionales correspondientes a la entrega de esta evaluación:
 
 * **Institución:** INACAP (Sede Valparaíso)
 * **Carrera:** Analista Programador
-* **Asignatura:** Fundamentos de Seguridad de la informacion
+* **Asignatura:** Fundamentos de Seguridad de la información
 * **Evaluación:** Evaluación Sumativa 2
 * **Estudiante:** Michele Andrea Barriga Carrasco
 * **Docente:** Rubén Alejandro Schnettler Lucero
