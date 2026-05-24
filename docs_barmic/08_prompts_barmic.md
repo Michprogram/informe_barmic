@@ -28,3 +28,7 @@ comparación de marcos regulatorios (criterio 2.1.3).
 6. Y ahora debo realizar el quinto md. el cual debe contemplar:  Actores identificados y sus responsabilidades penales, civiles y administrativas, con cita de norma en relacion al caso de Filtracion de datos de Twitch. 
 7. Te cuento que en relacion con todo este proyecto debo realizar una aplicacion en react + vite, que fue el primer proyecto que levantamos. Quiero que con toda la informacion recaudada realices un tipo informe interactivo en una pagina html, y dame el codigo para ponerlo en mi proyecto
 8. Mira tengo mis archivos del proyecto con vite, me puedes señalar exactamente donde poner este codigo para que funcione?
+
+24.05
+9. oye mira mi proyecto me gusto bastante pero me gustaria que quedara mas completo y tuviera mas enfasis en el contenido como tal, siendo que tiene muy poca informacion sobre el tema
+10. Ahora me gustaria que mi profesor pudiera ver los prompts que utilice desde la misma aplicacion, podemos agregarlo en alguna parte? 

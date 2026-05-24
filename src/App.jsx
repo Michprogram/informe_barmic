@@ -298,8 +298,10 @@ function DatosPersonales() {
       </div>
 
       <h3 className="font-bold text-xl text-slate-800 mb-4 border-b pb-2">Vulneración de los Derechos ARCO (Artículo 12)</h3>
-      <p className="text-slate-600 mb-5">
-        Ante esta negligencia en el resguardo de la información, el Artículo 12 de la Ley 19.628 faculta a los usuarios y creadores de contenido a exigir el cumplimiento de sus derechos fundamentales frente a Twitch:
+      <p className="text-slate-600 mb-5 leading-relaxed">
+        Ante esta negligencia en el resguardo de la información, los usuarios están facultados para ejercer sus Derechos ARCO amparados en el <strong>Artículo 12 de la Ley 19.628</strong>, el cual establece textualmente que: <br /><br />
+        <em className="pl-4 border-l-4 border-slate-300 block text-slate-500">"Toda persona tiene derecho a exigir a quien se dedique al tratamiento de datos personales, información sobre los datos relativos a su persona, su procedencia y destinatario, el propósito del almacenamiento..."</em><br />
+        Esto obliga a la plataforma a responder a las siguientes vulneraciones:
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
