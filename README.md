@@ -48,11 +48,16 @@ Para ejecutar este proyecto en tu propia computadora:
 1. **Clonar el repositorio:**
    ```bash
    git clone [https://github.com/Michprogram/informe_barmic.git](https://github.com/Michprogram/informe_barmic.git)
- ## 
-   
-
-
-👨‍🎓 Información Académica
+2. **Ingresar a la carpeta del proyecto:** 
+    ```bash
+    cd informe_barmic 
+3. **Instalar las dependencias (Node_Modules):**
+    ```bash
+    npm install
+4. Iniciar el servidor local de Vite:
+    ```bash
+    npm run dev
+## 👨‍🎓 Información Académica
 
 A continuación se detallan los datos institucionales correspondientes a la entrega de esta evaluación:
 
@@ -64,3 +69,7 @@ A continuación se detallan los datos institucionales correspondientes a la entr
 * **Docente:** Rubén Alejandro Schnettler Lucero
 * **Fecha de Entrega:** 27 de mayo de 2026
 * **Identificador del Proyecto:** `informe_barmic`
+
+
+
+
