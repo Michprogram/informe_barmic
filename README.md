@@ -67,7 +67,7 @@ A continuación se detallan los datos institucionales correspondientes a la entr
 * **Evaluación:** Evaluación Sumativa 2
 * **Estudiante:** Michele Andrea Barriga Carrasco
 * **Docente:** Rubén Alejandro Schnettler Lucero
-* **Fecha de Entrega:** 27 de mayo de 2026
+* **Fecha de Entrega:** 28 de mayo de 2026
 * **Identificador del Proyecto:** `informe_barmic`
 
 
