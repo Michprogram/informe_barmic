@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  FileText, BookOpen, AlertOctagon, Columns, Users, Database, ShieldCheck, Menu, X, Scale, Gavel, MessageSquare, Terminal, LockOpen, Skull, AlertTriangle, Fingerprint, Eye, ServerCrash
+  FileText, BookOpen, AlertOctagon, Columns, Users, Database, ShieldCheck, Menu, X, Scale, Gavel, MessageSquare, Terminal, LockOpen, Skull, AlertTriangle, Fingerprint, Eye, ServerCrash, Printer
 } from 'lucide-react';
 
 // --- COMPONENTES DE CADA SECCIÓN ---
@@ -600,8 +600,20 @@ export default function App() {
             <ShieldCheck className="text-purple-500 w-8 h-8" />
             <h1 className="text-lg font-bold leading-tight uppercase tracking-wider">Ciberseguridad<br /><span className="text-purple-400">Legal</span></h1>
           </div>
-          <p className="text-xs text-slate-500 mt-2 tracking-widest uppercase font-semibold relative z-10">Expediente T-2021</p>
-          <div className="mt-2 inline-flex items-center gap-2 bg-red-950/50 border border-red-900 px-2 py-1 rounded relative z-10">
+
+          {/* Contenedor modificado para incluir el botón de impresión */}
+          <div className="flex items-center justify-between mt-2 relative z-10">
+            <p className="text-xs text-slate-500 tracking-widest uppercase font-semibold">Expediente T-2021</p>
+            <button
+              onClick={() => window.print()}
+              className="text-slate-500 hover:text-purple-400 transition-colors bg-slate-900 p-1.5 rounded border border-slate-800 hover:border-purple-500/50 flex items-center justify-center"
+              title="Exportar a PDF / Imprimir"
+            >
+              <Printer className="w-4 h-4" />
+            </button>
+          </div>
+
+          <div className="mt-3 inline-flex items-center gap-2 bg-red-950/50 border border-red-900 px-2 py-1 rounded relative z-10">
             <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
             <p className="text-xs font-mono text-red-400">STATUS: CLASIFICADO</p>
           </div>
