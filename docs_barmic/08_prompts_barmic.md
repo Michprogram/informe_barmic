@@ -35,3 +35,7 @@ comparación de marcos regulatorios (criterio 2.1.3).
 11. listo, ahora puedes ayudarme a subirlo a vercel?
 12. y ahora ya tengo el proyecto completo listo, ya en vercel y todo. Pero me gustaria hacer cambio visual, para que sea mas atractivo, y que tenga una aura como de peligro dado la filtracion y todo lo que es la filtracion de datos etc, tambien el tema de streamers y twitch y amazon, como podemos hacerlo que tenga mas visualizacion mas llamativa. 
 
+26.05
+13. Me gustaria agregar un boton para poder pasar a pdf la app que acabamos de realizar, ayudame creando uno en la parte superior del menu
+14. Ahora tambien le quiero agregar la hora en tiempo real
+
