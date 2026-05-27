@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   FileText, BookOpen, AlertOctagon, Columns, Users, Database, ShieldCheck, Menu, X, Scale, Gavel, MessageSquare, Terminal, LockOpen, Skull, AlertTriangle, Fingerprint, Eye, ServerCrash, Printer
 } from 'lucide-react';
@@ -547,120 +547,141 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('resumen');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const menuItems = [
-    { id: 'resumen', label: 'Reporte Incidente', icon: Terminal },
-    { id: 'marco', label: 'Marco Normativo', icon: BookOpen },
-    { id: 'delitos', label: 'Delitos (Ley 21.459)', icon: Skull },
-    { id: 'comparacion', label: 'Comparación', icon: Columns },
-    { id: 'responsabilidades', label: 'Actores Legales', icon: Users },
-    { id: 'datos', label: 'Datos (Ley 19.628)', icon: Database },
-    { id: 'conclusiones', label: 'Mitigación', icon: ShieldCheck },
-    { id: 'prompts', label: 'Bitácora IA', icon: MessageSquare },
-  ];
+  export default function App() {
+    const [activeTab, setActiveTab] = useState('resumen');
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [sysTime, setSysTime] = useState('');
 
-  const renderContent = () => {
-    switch (activeTab) {
-      case 'resumen': return <Resumen />;
-      case 'marco': return <MarcoNormativo />;
-      case 'delitos': return <Delitos />;
-      case 'comparacion': return <Comparacion />;
-      case 'responsabilidades': return <Responsabilidades />;
-      case 'datos': return <DatosPersonales />;
-      case 'conclusiones': return <Conclusiones />;
-      case 'prompts': return <Prompts />;
-      default: return <Resumen />;
-    }
-  };
+    // Efecto para actualizar la hora cada segundo
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setSysTime(new Date().toLocaleTimeString('es-CL', { hour12: false }));
+      }, 1000);
+      return () => clearInterval(interval);
+    }, []);
 
-  return (
-    <div className="min-h-screen bg-slate-950 flex flex-col md:flex-row font-sans selection:bg-purple-500/30">
 
-      {/* Botón menú móvil */}
-      <div className="md:hidden bg-black border-b border-purple-900/50 text-white p-4 flex justify-between items-center shadow-md z-20">
-        <div className="flex items-center gap-2">
-          <ShieldCheck className="text-purple-500" />
-          <span className="font-bold tracking-widest text-sm uppercase">Twitch_Leak.sys</span>
+    const menuItems = [
+      { id: 'resumen', label: 'Reporte Incidente', icon: Terminal },
+      { id: 'marco', label: 'Marco Normativo', icon: BookOpen },
+      { id: 'delitos', label: 'Delitos (Ley 21.459)', icon: Skull },
+      { id: 'comparacion', label: 'Comparación', icon: Columns },
+      { id: 'responsabilidades', label: 'Actores Legales', icon: Users },
+      { id: 'datos', label: 'Datos (Ley 19.628)', icon: Database },
+      { id: 'conclusiones', label: 'Mitigación', icon: ShieldCheck },
+      { id: 'prompts', label: 'Bitácora IA', icon: MessageSquare },
+    ];
+
+    const renderContent = () => {
+      switch (activeTab) {
+        case 'resumen': return <Resumen />;
+        case 'marco': return <MarcoNormativo />;
+        case 'delitos': return <Delitos />;
+        case 'comparacion': return <Comparacion />;
+        case 'responsabilidades': return <Responsabilidades />;
+        case 'datos': return <DatosPersonales />;
+        case 'conclusiones': return <Conclusiones />;
+        case 'prompts': return <Prompts />;
+        default: return <Resumen />;
+      }
+    };
+
+    return (
+      <div className="min-h-screen bg-slate-950 flex flex-col md:flex-row font-sans selection:bg-purple-500/30">
+
+        {/* Botón menú móvil */}
+        <div className="md:hidden bg-black border-b border-purple-900/50 text-white p-4 flex justify-between items-center shadow-md z-20">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="text-purple-500" />
+            <span className="font-bold tracking-widest text-sm uppercase">Twitch_Leak.sys</span>
+          </div>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-purple-400">
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
         </div>
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-purple-400">
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
-      </div>
 
-      {/* Menú Lateral (Sidebar) */}
-      <aside className={`
+        {/* Menú Lateral (Sidebar) */}
+        <aside className={`
         ${isMobileMenuOpen ? 'block' : 'hidden'} 
         md:flex flex-col w-full md:w-72 bg-black border-r border-slate-800 text-slate-300 flex-shrink-0 shadow-[4px_0_24px_rgba(0,0,0,0.5)]
         absolute md:relative z-10 min-h-screen
       `}>
-        <div className="p-7 hidden md:block border-b border-slate-800 relative overflow-hidden">
-          <div className="absolute -top-10 -right-10 opacity-20">
-            <ServerCrash className="w-32 h-32 text-purple-600" />
-          </div>
-          <div className="flex items-center gap-3 text-white mb-3 relative z-10">
-            <ShieldCheck className="text-purple-500 w-8 h-8" />
-            <h1 className="text-lg font-bold leading-tight uppercase tracking-wider">Ciberseguridad<br /><span className="text-purple-400">Legal</span></h1>
-          </div>
+          <div className="p-7 hidden md:block border-b border-slate-800 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 opacity-20">
+              <ServerCrash className="w-32 h-32 text-purple-600" />
+            </div>
+            <div className="flex items-center gap-3 text-white mb-3 relative z-10">
+              <ShieldCheck className="text-purple-500 w-8 h-8" />
+              <h1 className="text-lg font-bold leading-tight uppercase tracking-wider">Ciberseguridad<br /><span className="text-purple-400">Legal</span></h1>
+            </div>
 
-          {/* Contenedor modificado para incluir el botón de impresión */}
-          <div className="flex items-center justify-between mt-2 relative z-10">
-            <p className="text-xs text-slate-500 tracking-widest uppercase font-semibold">Expediente T-2021</p>
-            <button
-              onClick={() => window.print()}
-              className="text-slate-500 hover:text-purple-400 transition-colors bg-slate-900 p-1.5 rounded border border-slate-800 hover:border-purple-500/50 flex items-center justify-center"
-              title="Exportar a PDF / Imprimir"
-            >
-              <Printer className="w-4 h-4" />
-            </button>
-          </div>
-
-          <div className="mt-3 inline-flex items-center gap-2 bg-red-950/50 border border-red-900 px-2 py-1 rounded relative z-10">
-            <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-            <p className="text-xs font-mono text-red-400">STATUS: CLASIFICADO</p>
-          </div>
-        </div>
-
-        <nav className="mt-4 md:mt-6 flex flex-col gap-2 px-4 pb-8 flex-1">
-          {menuItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeTab === item.id;
-            const isPromptsTab = item.id === 'prompts';
-
-            return (
+            {/* Contenedor modificado para incluir el botón de impresión */}
+            <div className="flex items-center justify-between mt-2 relative z-10">
+              <p className="text-xs text-slate-500 tracking-widest uppercase font-semibold">Expediente T-2021</p>
               <button
-                key={item.id}
-                onClick={() => {
-                  setActiveTab(item.id);
-                  setIsMobileMenuOpen(false);
-                }}
-                className={`
+                onClick={() => window.print()}
+                className="text-slate-500 hover:text-purple-400 transition-colors bg-slate-900 p-1.5 rounded border border-slate-800 hover:border-purple-500/50 flex items-center justify-center"
+                title="Exportar a PDF / Imprimir"
+              >
+                <Printer className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Contenedor modificado para incluir el reloj en tiempo real */}
+            <div className="mt-4 flex items-center justify-between relative z-10">
+              <div className="inline-flex items-center gap-2 bg-red-950/50 border border-red-900 px-2 py-1 rounded">
+                <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                <p className="text-[10px] font-mono text-red-400">STATUS: CLASIFICADO</p>
+              </div>
+
+              <div className="bg-slate-900/80 border border-slate-800 px-2 py-1 rounded">
+                <p className="text-[10px] font-mono text-emerald-400/80">{sysTime} CHL</p>
+              </div>
+            </div>
+          </div>
+
+          <nav className="mt-4 md:mt-6 flex flex-col gap-2 px-4 pb-8 flex-1">
+            {menuItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeTab === item.id;
+              const isPromptsTab = item.id === 'prompts';
+
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    setActiveTab(item.id);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`
                   flex items-center gap-3 px-4 py-3.5 rounded text-left transition-all duration-300 font-medium tracking-wide uppercase text-xs
                   ${isActive && !isPromptsTab ? 'bg-gradient-to-r from-purple-900/40 to-transparent text-purple-300 border-l-2 border-purple-500 shadow-[inset_4px_0_10px_rgba(168,85,247,0.1)]' : ''}
                   ${isActive && isPromptsTab ? 'bg-gradient-to-r from-pink-900/40 to-transparent text-pink-300 border-l-2 border-pink-500 shadow-[inset_4px_0_10px_rgba(236,72,153,0.1)]' : ''}
                   ${!isActive ? 'text-slate-500 hover:bg-slate-900 hover:text-slate-300 border-l-2 border-transparent hover:border-slate-700' : ''}
                   ${!isActive && isPromptsTab ? 'mt-4 border-t border-slate-800 pt-6' : ''}
                 `}
-              >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-white' : (isPromptsTab ? 'text-pink-700' : 'text-slate-600')}`} />
-                <span>{item.label}</span>
-              </button>
-            );
-          })}
-        </nav>
-      </aside>
+                >
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-white' : (isPromptsTab ? 'text-pink-700' : 'text-slate-600')}`} />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+          </nav>
+        </aside>
 
-      {/* Contenido Principal */}
-      <main className="flex-1 bg-slate-950 p-6 md:p-10 lg:p-12 h-screen overflow-y-auto relative bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/10 via-slate-950 to-slate-950">
-        <div className="max-w-4xl mx-auto">
-          {renderContent()}
-        </div>
+        {/* Contenido Principal */}
+        <main className="flex-1 bg-slate-950 p-6 md:p-10 lg:p-12 h-screen overflow-y-auto relative bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/10 via-slate-950 to-slate-950">
+          <div className="max-w-4xl mx-auto">
+            {renderContent()}
+          </div>
 
-        {/* Footer */}
-        <footer className="max-w-4xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center md:text-left flex flex-col md:flex-row justify-between text-xs text-slate-600 font-mono tracking-widest uppercase">
-          <span className="mb-2 md:mb-0">Agente: Michele Barriga</span>
-          <span>Autoridad: Rubén Schnettler L. | INACAP</span>
-        </footer>
-      </main>
+          {/* Footer */}
+          <footer className="max-w-4xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center md:text-left flex flex-col md:flex-row justify-between text-xs text-slate-600 font-mono tracking-widest uppercase">
+            <span className="mb-2 md:mb-0">Agente: Michele Barriga</span>
+            <span>Autoridad: Rubén Schnettler L. | INACAP</span>
+          </footer>
+        </main>
 
-    </div>
-  );
-} 
+      </div>
+    );
+  } 
