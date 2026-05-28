@@ -41,3 +41,4 @@ comparación de marcos regulatorios (criterio 2.1.3).
 
 28.05
 15. Necesito realizar varias modificaciones a mi proyecto, dentro de ellas necesito agregar un boton para cambiar el modo oscuro a modo claro de mi pagina, y tambien necesito agregar al finan un enlace para que la persona que vea esto, llegue a mi github que es: https://github.com/Michprogram
+16. ahora mejorando un poco el contenido de mi proyecto, tengo que realizar una mejor version en el contraste de normativas, especificamente la aplicatividad Twitch.

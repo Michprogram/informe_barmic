@@ -213,9 +213,12 @@ function Comparacion() {
             </tr>
             <tr className="hover:bg-slate-800/50 transition bg-purple-900/10">
               <td className="p-4 font-bold text-purple-300 border-r border-slate-800">Aplicabilidad Twitch</td>
-              <td className="p-4 text-slate-300 border-r border-slate-800">Responsabilidad civil por exponer ingresos de streamers chilenos.</td>
-              <td className="p-4 text-slate-300 border-r border-slate-800">Multa global por fallas en resiliencia y datos europeos.</td>
-              <td className="p-4 text-slate-300 bg-indigo-950/10">Infracción crítica: red financiera no aislada del código fuente.</td>
+              <td className="p-4 text-slate-300 border-r border-slate-800">Art. 11 y 23 (Ley 19.628): 
+Infracción directa al deber de cuidado. Obligación legal de indemnizar a los creadores chilenos por exponer su historial de ganancias (dato patrimonial), dejándolos vulnerables a perfilamiento económico y extorsiones.</td>
+              <td className="p-4 text-slate-300 border-r border-slate-800">Art. 32 y 83 (GDPR):
+Sanción por violar el principio de resiliencia de los sistemas. La plataforma arriesga multas punitivas de hasta el 4% de su facturación global anual por la exposición sistémica de usuarios europeos.</td>
+              <td className="p-4 text-slate-300 bg-indigo-950/10">&gt; Requisito 1 (PCI-DSS):
+Falla crítica de arquitectura. La falta de micro-segmentación permitió que el entorno de tarjetas (CDE) estuviera en la misma red vulnerada que el código fuente, arriesgando la revocación para procesar pagos.</td>
             </tr>
           </tbody>
         </table>
@@ -648,7 +651,7 @@ return (
         <div className="bg-black p-6 rounded-lg border border-purple-900 shadow-[inset_0_0_20px_rgba(126,34,206,0.15)]">
           <h3 className="font-bold text-purple-400 mb-3 text-lg font-mono">&gt; Sys.Reflexion(Chatbot_vs_Agente)</h3>
           <p className="text-slate-300 text-sm leading-relaxed mb-3">
-            Utilizar a Gemini integralmente como un <strong className="text-white">Agente de Desarrollo e Investigación</strong> (y no como un simple chatbot conversacional) fue clave desde la primera etapa para aterrizar conceptos legales, estructurar la información y simular el escenario hipotético de aplicar la legislación chilena (Ley 21.459 y 19.628) al caso de Twitch.
+            Utilizar a Gemini integralmente como un <strong className="text-white">Agente de Desarrollo e Investigación</strong> fue clave desde la primera etapa para aterrizar conceptos legales, estructurar la información y simular el escenario hipotético de aplicar la legislación chilena (Ley 21.459 y 19.628) al caso de Twitch.
           </p>
           <p className="text-slate-300 text-sm leading-relaxed">
             Al encomendarle la generación de la aplicación web, el Agente estructuró rápidamente el entorno con React y Tailwind CSS. Si bien al inicio la IA tendió a resumir los textos legales para priorizar el diseño visual, esto demuestra la verdadera dinámica de trabajo: la IA agiliza enormemente la construcción técnica, pero el criterio analítico, la profundidad legal y las directrices del proyecto dependen enteramente del desarrollador humano que orquesta y guía a la herramienta.
