@@ -238,7 +238,7 @@ function Responsabilidades() {
         Identificación de perfiles involucrados y atribución jurídica:
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
 
         {/* Atacante */}
         <div className="bg-slate-900 rounded-lg border border-red-900 shadow-lg flex flex-col overflow-hidden relative">
@@ -309,8 +309,33 @@ function Responsabilidades() {
           </div>
         </div>
 
-      </div>
+      
+      
+      {/* 4chan */}
+        <div className="bg-slate-900 rounded-lg border border-teal-900 shadow-lg flex flex-col overflow-hidden relative hover:border-teal-500/50 transition-colors">
+          <div className="absolute top-2 right-2"><MessageSquare className="text-teal-500/20 w-12 h-12" /></div>
+          <div className="bg-teal-950 p-4 border-b border-teal-800">
+            <h3 className="text-teal-400 font-bold text-lg text-center uppercase tracking-widest">4. 4chan (Foro)</h3>
+            <p className="text-teal-200/50 text-xs text-center mt-1 font-mono">ID: NODO_DIFUSION</p>
+          </div>
+          <div className="p-5 space-y-4 flex-1 z-10 text-sm">
+            <div>
+              <strong className="text-slate-500 block mb-1 font-mono border-b border-slate-800">&gt;&gt; PENAL</strong>
+              <p className="text-slate-400">Protegido como intermediario (Safe Harbor). Solo arriesgaría complicidad (Art. 6 Ley 21.459) si hay una negativa dolosa a eliminar el enlace malicioso tras una orden.</p>
+            </div>
+            <div>
+              <strong className="text-orange-400 block mb-1 font-mono border-b border-slate-800">&gt;&gt; CIVIL</strong>
+              <p className="text-slate-400">Responsabilidad por omisión. Debe responder e indemnizar si ignora los requerimientos formales de cese de distribución (Notice and Takedown).</p>
+            </div>
+            <div>
+              <strong className="text-teal-400 block mb-1 font-mono border-b border-slate-800">&gt;&gt; ADMIN</strong>
+              <p className="text-slate-400">Posible bloqueo de DNS a nivel de Proveedores de Internet (ISP) ordenado por la autoridad de telecomunicaciones para mitigar el daño.</p>
+            </div>
+          </div>
+        </div>
+
     </div>
+  </div>
   );
 }
 
