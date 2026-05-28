@@ -743,8 +743,19 @@ export default function App() {
         </div>
 
         {/* Footer */}
-        <footer className="max-w-4xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center md:text-left flex flex-col md:flex-row justify-between text-xs text-slate-600 font-mono tracking-widest uppercase">
-          <span className="mb-2 md:mb-0">Agente: Michele Barriga</span>
+        <footer className="max-w-4xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-600 font-mono tracking-widest uppercase">
+          <span>Agente: Michele Barriga</span>
+          
+          <a 
+            href="https://github.com/Michprogram" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-purple-400 transition-colors bg-slate-900/50 px-3 py-1.5 rounded border border-slate-800 hover:border-purple-500/50"
+          >
+            <Github className="w-4 h-4" />
+            GitHub / Michprogram
+          </a>
+
           <span>Autoridad: Rubén Schnettler L. | INACAP</span>
         </footer>
       </main>
