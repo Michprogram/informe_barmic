@@ -483,7 +483,8 @@ function Referencias() {
 }
 
 function Prompts() {
-  return (
+const [isHistoryOpen, setIsHistoryOpen] = useState(false); 
+return (
     <div className="space-y-6 animate-fade-in text-slate-300">
       <div className="flex items-center gap-3 border-b border-purple-800/50 pb-4">
         <MessageSquare className="text-pink-500 w-8 h-8" />
@@ -492,94 +493,152 @@ function Prompts() {
 
       <div className="space-y-6">
 
-        {/* Sección de Prompts Utilizados */}
-        <div className="bg-slate-900 p-6 rounded-lg border border-pink-900/30 shadow-lg">
-          <h3 className="font-bold text-lg text-pink-400 mb-4 border-b border-slate-700 pb-2 font-mono">&gt; Historial de Prompts (Gemini)</h3>
-
-          <div className="space-y-6">
-            {/* 14 de Mayo */}
-            <div>
-              <h4 className="font-bold text-white mb-3 flex items-center gap-2">
-                <span className="bg-pink-900 text-pink-200 px-2 py-1 rounded text-xs font-mono">14-MAY</span>
-                Investigación y Desarrollo Base
-              </h4>
-              <div className="space-y-3 pl-2 border-l-2 border-slate-700">
-                <div className="bg-black/50 p-3 rounded border border-slate-800">
-                  <span className="text-pink-500 font-bold text-xs uppercase mb-1 block">Contexto y Leyes</span>
-                  <p className="text-sm text-slate-400 font-mono text-xs">"Primero que todo tengo que definir mi tema... El caso a analizar puede provenir de cualquier parte... Independientemente del país, el análisis legal debe aplicar la legislación chilena (Ley 21.459 y Ley 19.628)..."</p>
-                </div>
-                <div className="bg-black/50 p-3 rounded border border-slate-800">
-                  <span className="text-pink-500 font-bold text-xs uppercase mb-1 block">Investigación</span>
-                  <p className="text-sm text-slate-400 font-mono text-xs">"Dame informacion sobre el caso de filtracion de datos de twitch en el año 2021 de los creadores de contenido."</p>
-                </div>
-                <div className="bg-black/50 p-3 rounded border border-slate-800">
-                  <span className="text-pink-500 font-bold text-xs uppercase mb-1 block">Estructura Markdown</span>
-                  <p className="text-sm text-slate-400 font-mono text-xs">"Ahora completa este otro archivo también en md... Leyes y regulaciones aplicables al caso, nacionales e internacionales (mínimo 4 normas justificadas)."</p>
-                </div>
-                <div className="bg-black/50 p-3 rounded border border-slate-800">
-                  <span className="text-pink-500 font-bold text-xs uppercase mb-1 block">Delitos y Comparación</span>
-                  <p className="text-sm text-slate-400 font-mono text-xs">"Necesito realizar una tipificacion de los delitos segun la Ley 21.459... Ahora necesito seguir con el md. de comparacion..."</p>
-                </div>
-                <div className="bg-black/50 p-3 rounded border border-slate-800">
-                  <span className="text-pink-500 font-bold text-xs uppercase mb-1 block">Responsabilidades</span>
-                  <p className="text-sm text-slate-400 font-mono text-xs">"Y ahora debo realizar el quinto md. el cual debe contemplar: Actores identificados y sus responsabilidades penales, civiles y administrativas..."</p>
-                </div>
-                <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50">
-                  <span className="text-blue-400 font-bold text-xs uppercase mb-1 block">Desarrollo Web (React)</span>
-                  <p className="text-sm text-blue-200 font-mono text-xs">"Te cuento que en relacion con todo este proyecto debo realizar una aplicacion en react + vite... Quiero que realices un tipo informe interactivo en una pagina html, y dame el codigo..."</p>
-                </div>
-              </div>
-            </div>
-
-            {/* 24 de Mayo */}
-            <div className="pt-2">
-              <h4 className="font-bold text-white mb-3 flex items-center gap-2">
-                <span className="bg-pink-900 text-pink-200 px-2 py-1 rounded text-xs font-mono">24-MAY</span>
-                Refinamiento y Mejoras
-              </h4>
-              <div className="space-y-3 pl-2 border-l-2 border-slate-700">
-                <div className="bg-orange-950/30 p-3 rounded border border-orange-900/50">
-                  <span className="text-orange-500 font-bold text-xs uppercase mb-1 block">Corrección de Profundidad</span>
-                  <p className="text-sm text-orange-200 font-mono text-xs">"oye mira mi proyecto me gusto bastante pero me gustaria que quedara mas completo y tuviera mas enfasis en el contenido como tal, siendo que tiene muy poca informacion sobre el tema"</p>
-                </div>
-                <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50">
-                  <span className="text-blue-400 font-bold text-xs uppercase mb-1 block">Integración Final</span>
-                  <p className="text-sm text-blue-200 font-mono text-xs">"Ahora me gustaria que mi profesor pudiera ver los prompts que utilice desde la misma aplicacion, podemos agregarlo en alguna parte?"</p>
-                </div>
-              </div>
-            </div>
-
-            {/* 26 de Mayo */}
-            <div className="pt-2">
-              <h4 className="font-bold text-white mb-3 flex items-center gap-2">
-                <span className="bg-pink-900 text-pink-200 px-2 py-1 rounded text-xs font-mono">26-MAY</span>
-                Features Técnicos y Dark Mode
-              </h4>
-              <div className="space-y-3 pl-2 border-l-2 border-slate-700">
-                <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50">
-                  <span className="text-blue-400 font-bold text-xs uppercase mb-1 block">UI/UX y Hooks</span>
-                  <p className="text-sm text-blue-200 font-mono text-xs">"Me gustaria hacer cambio visual, para que sea mas atractivo y que tenga una aura como de peligro... me gustaria realizar alguna mejora en mi proyecto para agregar mas commits... ayudame explicitamente con esa (impresión y reloj)."</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
+        {/* Declaración de Gemini como Agente */}
+        <div className="bg-black p-6 rounded-lg border border-pink-900 shadow-[inset_0_0_20px_rgba(236,72,153,0.15)]">
+          <h3 className="font-bold text-pink-400 mb-3 text-lg font-mono">&gt; Sys.Role(Gemini_Dev_Agent)</h3>
+          <p className="text-slate-300 text-sm leading-relaxed mb-3">
+            Para el desarrollo de esta evaluación, <strong className="text-white">Google Gemini NO fue utilizado como un simple "chatbot" conversacional</strong> de preguntas y respuestas, sino que se integró a lo largo de múltiples sesiones como un <strong className="text-white">Agente de Desarrollo (Dev Agent)</strong> interactivo.
+          </p>
+          <p className="text-slate-300 text-sm leading-relaxed">
+            El Agente operó de manera integral cruzando dominios: partió investigando y aplicando el marco legal chileno (Leyes 21.459 y 19.628) sobre el caso internacional de Twitch. Posteriormente, evolucionó para estructurar la arquitectura local en Vite, inyectar dependencias, generar la maquetación en React + Tailwind CSS, integrar hooks de estado (reloj en vivo, dark mode), y depurar errores de sintaxis y despliegue (CI/CD) directo a Vercel.
+          </p>
         </div>
 
-        {/* Sección de Correcciones */}
+        {/* Menú Desplegable de Prompts */}
+        <div className="bg-slate-900 p-6 rounded-lg border border-purple-900/30 shadow-lg transition-all duration-300">
+          <button 
+            onClick={() => setIsHistoryOpen(!isHistoryOpen)}
+            className="w-full flex items-center justify-between cursor-pointer group outline-none"
+          >
+            <h3 className="font-bold text-lg text-purple-400 font-mono group-hover:text-purple-300 transition-colors">
+              &gt; Historial Completo de Prompts
+            </h3>
+            <span className="text-purple-400 font-mono bg-purple-950 px-2 py-1 rounded text-xs border border-purple-800">
+              {isHistoryOpen ? '[-] CONTRAER' : '[+] EXPANDIR'}
+            </span>
+          </button>
+
+          {isHistoryOpen && (
+            <div className="mt-6 space-y-8 animate-fade-in border-t border-slate-800 pt-6">
+              
+              {/* DIA 14.05 */}
+              <div>
+                <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="bg-pink-900 text-pink-200 px-2 py-1 rounded text-xs font-mono">14-MAY</span>
+                  Investigación Legal y Setup Base
+                </h4>
+                <div className="space-y-3 pl-2 border-l-2 border-slate-700">
+                  <div className="bg-black/50 p-3 rounded border border-slate-800 text-sm text-slate-400 font-mono text-xs leading-relaxed">
+                    <span className="text-pink-500 font-bold block mb-1">1.</span>
+                    "Primero que todo tengo que definir mi tema, necesito que sea sobre delitos digitales... Independientemente del país donde ocurrió el caso, el análisis legal debe aplicar la legislación chilena cuando la rúbrica así lo requiere..."
+                  </div>
+                  <div className="bg-black/50 p-3 rounded border border-slate-800 text-sm text-slate-400 font-mono text-xs">
+                    <span className="text-pink-500 font-bold block mb-1">2.</span>
+                    "Dame informacion sobre el caso de filtracion de datos de twitch en el año 2021 de los creadores de contenido."
+                  </div>
+                  <div className="bg-black/50 p-3 rounded border border-slate-800 text-sm text-slate-400 font-mono text-xs">
+                    <span className="text-pink-500 font-bold block mb-1">3.</span>
+                    "Ahora completa este otro archivo también en md. que debe llevar lo siguiente sobre el mismo caso... Leyes y regulaciones aplicables al caso, nacionales e internacionales (mínimo 4 normas justificadas)."
+                  </div>
+                  <div className="bg-black/50 p-3 rounded border border-slate-800 text-sm text-slate-400 font-mono text-xs">
+                    <span className="text-pink-500 font-bold block mb-1">4.</span>
+                    "Necesito realizar una tipificacion de los delitos segun la Ley 21.459, dame por lo menos 4 de estos."
+                  </div>
+                  <div className="bg-black/50 p-3 rounded border border-slate-800 text-sm text-slate-400 font-mono text-xs">
+                    <span className="text-pink-500 font-bold block mb-1">5.</span>
+                    "Ahora necesito seguir con el md. de comparacion. El cual debe incluir lo siguiente Tabla comparativa de marcos regulatorios por industria (mínimo 3 marcos y 3 ejes)."
+                  </div>
+                  <div className="bg-black/50 p-3 rounded border border-slate-800 text-sm text-slate-400 font-mono text-xs">
+                    <span className="text-pink-500 font-bold block mb-1">6.</span>
+                    "Y ahora debo realizar el quinto md. el cual debe contemplar: Actores identificados y sus responsabilidades penales, civiles y administrativas, con cita de norma en relacion al caso de Filtracion de datos de Twitch."
+                  </div>
+                  <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50 text-sm text-blue-200 font-mono text-xs">
+                    <span className="text-blue-400 font-bold block mb-1">7.</span>
+                    "Te cuento que en relacion con todo este proyecto debo realizar una aplicacion en react + vite, que fue el primer proyecto que levantamos. Quiero que con toda la informacion recaudada realices un tipo informe interactivo en una pagina html, y dame el codigo para ponerlo en mi proyecto"
+                  </div>
+                  <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50 text-sm text-blue-200 font-mono text-xs">
+                    <span className="text-blue-400 font-bold block mb-1">8.</span>
+                    "Mira tengo mis archivos del proyecto con vite, me puedes señalar exactamente donde poner este codigo para que funcione?"
+                  </div>
+                </div>
+              </div>
+
+              {/* DIA 24.05 */}
+              <div>
+                <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="bg-pink-900 text-pink-200 px-2 py-1 rounded text-xs font-mono">24-MAY</span>
+                  Refinamiento, UI y Despliegue
+                </h4>
+                <div className="space-y-3 pl-2 border-l-2 border-slate-700">
+                  <div className="bg-orange-950/30 p-3 rounded border border-orange-900/50 text-sm text-orange-200 font-mono text-xs">
+                    <span className="text-orange-500 font-bold block mb-1">9.</span>
+                    "oye mira mi proyecto me gusto bastante pero me gustaria que quedara mas completo y tuviera mas enfasis en el contenido como tal, siendo que tiene muy poca informacion sobre el tema"
+                  </div>
+                  <div className="bg-black/50 p-3 rounded border border-slate-800 text-sm text-slate-400 font-mono text-xs">
+                    <span className="text-pink-500 font-bold block mb-1">10.</span>
+                    "Ahora me gustaria que mi profesor pudiera ver los prompts que utilice desde la misma aplicacion, podemos agregarlo en alguna parte?"
+                  </div>
+                  <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50 text-sm text-blue-200 font-mono text-xs">
+                    <span className="text-blue-400 font-bold block mb-1">11.</span>
+                    "listo, ahora puedes ayudarme a subirlo a vercel?"
+                  </div>
+                  <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50 text-sm text-blue-200 font-mono text-xs leading-relaxed">
+                    <span className="text-blue-400 font-bold block mb-1">12.</span>
+                    "y ahora ya tengo el proyecto completo listo, ya en vercel y todo. Pero me gustaria hacer cambio visual, para que sea mas atractivo, y que tenga una aura como de peligro dado la filtracion y todo lo que es la filtracion de datos etc, tambien el tema de streamers y twitch y amazon, como podemos hacerlo que tenga mas visualizacion mas llamativa."
+                  </div>
+                </div>
+              </div>
+
+              {/* DIA 26.05 */}
+              <div>
+                <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="bg-pink-900 text-pink-200 px-2 py-1 rounded text-xs font-mono">26-MAY</span>
+                  Features Técnicos (Hooks y Navegador)
+                </h4>
+                <div className="space-y-3 pl-2 border-l-2 border-slate-700">
+                  <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50 text-sm text-blue-200 font-mono text-xs">
+                    <span className="text-blue-400 font-bold block mb-1">13.</span>
+                    "Me gustaria agregar un boton para poder pasar a pdf la app que acabamos de realizar, ayudame creando uno en la parte superior del menu"
+                  </div>
+                  <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50 text-sm text-blue-200 font-mono text-xs">
+                    <span className="text-blue-400 font-bold block mb-1">14.</span>
+                    "Ahora tambien le quiero agregar la hora en tiempo real"
+                  </div>
+                </div>
+              </div>
+
+              {/* DIA 28.05 */}
+              <div>
+                <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="bg-pink-900 text-pink-200 px-2 py-1 rounded text-xs font-mono">28-MAY</span>
+                  Interactividad y Referencias
+                </h4>
+                <div className="space-y-3 pl-2 border-l-2 border-slate-700">
+                  <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50 text-sm text-blue-200 font-mono text-xs leading-relaxed">
+                    <span className="text-blue-400 font-bold block mb-1">15.</span>
+                    "Necesito realizar varias modificaciones a mi proyecto, dentro de ellas necesito agregar un boton para cambiar el modo oscuro a modo claro de mi pagina, y tambien necesito agregar al finan un enlace para que la persona que vea esto, llegue a mi github que es: https://github.com/Michprogram"
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          )}
+        </div>
+
+{/* Sección de Intervención Humana (Correcciones) */}
         <div className="bg-slate-900 p-6 rounded-lg border border-orange-900/30 shadow-lg">
-          <h3 className="font-bold text-lg text-orange-400 mb-4 border-b border-slate-700 pb-2 font-mono">&gt; Intervención Humana (Correcciones)</h3>
+          <h3 className="font-bold text-lg text-orange-400 mb-4 border-b border-slate-700 pb-2 font-mono">&gt; Intervención Humana y Correcciones</h3>
           <ul className="space-y-4 text-sm text-slate-400">
             <li className="flex gap-3">
               <AlertOctagon className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
               <span>
-                <strong className="text-white">Exigencia de Profundidad (24 de mayo):</strong> El código inicial de React entregado por la IA contenía un resumen muy breve. Fue necesario instruir a la IA mediante un nuevo prompt para que inyectara el análisis legal completo (citando expresamente la normativa y añadiendo a Amazon como 3er actor) para asegurar el cumplimiento total de la rúbrica.
+                <strong className="text-white">Exigencia de Profundidad Legal (24 de mayo):</strong> El código inicial de React entregado por el Agente contenía un resumen muy breve. Fue necesario realizar el Prompt 9 para exigir la inyección del análisis legal exhaustivo (citando expresamente las normativas e identificando a Amazon como 3er actor civil).
               </span>
             </li>
             <li className="flex gap-3">
               <AlertOctagon className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
               <span>
-                <strong className="text-white">Estructura del Código:</strong> La IA generó un componente masivo difícil de ubicar. Se debió utilizar el prompt 8 para obligar a la IA a dar instrucciones precisas de arquitectura de archivos en Vite.
+                <strong className="text-white">Corrección Manual de Sintaxis (28 de mayo):</strong> Al integrar las últimas mejoras en vivo (reloj y botón de modo claro), el Agente duplicó el bloque principal, lo cual rompió el árbol de dependencias. Se debió intervenir manualmente borrando el bloque duplicado y corrigiendo el cierre de llaves.
               </span>
             </li>
           </ul>
