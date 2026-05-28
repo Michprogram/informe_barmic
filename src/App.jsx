@@ -644,9 +644,9 @@ export default function App() {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-slate-950 flex flex-col md:flex-row font-sans selection:bg-purple-500/30">
-
+return (
+    <div className={`min-h-screen bg-slate-950 flex flex-col md:flex-row font-sans selection:bg-purple-500/30 transition-all duration-500 ${!isDarkMode ? 'invert hue-rotate-180' : ''}`}>
+      
       {/* Botón menú móvil */}
       <div className="md:hidden bg-black border-b border-purple-900/50 text-white p-4 flex justify-between items-center shadow-md z-20">
         <div className="flex items-center gap-2">
