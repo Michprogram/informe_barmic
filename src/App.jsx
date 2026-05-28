@@ -648,10 +648,10 @@ return (
         <div className="bg-black p-6 rounded-lg border border-purple-900 shadow-[inset_0_0_20px_rgba(126,34,206,0.15)]">
           <h3 className="font-bold text-purple-400 mb-3 text-lg font-mono">&gt; Sys.Reflexion(Chatbot_vs_Agente)</h3>
           <p className="text-slate-300 text-sm leading-relaxed mb-3">
-            Utilizar a Gemini como <strong className="text-white">Chatbot externo</strong> fue clave en la primera etapa para aterrizar conceptos legales, estructurar los Markdown y simular el escenario hipotético de cruzar el caso internacional de Twitch con la legislación chilena (Ley 21.459 y 19.628).
+            Utilizar a Gemini integralmente como un <strong className="text-white">Agente de Desarrollo e Investigación</strong> (y no como un simple chatbot conversacional) fue clave desde la primera etapa para aterrizar conceptos legales, estructurar la información y simular el escenario hipotético de aplicar la legislación chilena (Ley 21.459 y 19.628) al caso de Twitch.
           </p>
           <p className="text-slate-300 text-sm leading-relaxed">
-            Sin embargo, al solicitarle generar la aplicación web, la dinámica requirió manejarla como un <strong className="text-white">Agente generador de código</strong>. Si bien estructuró rápidamente Tailwind y React, la IA tendió a resumir demasiado el texto para que cupiera visualmente. Esto demuestra que la IA agiliza la maquetación técnica, pero el criterio analítico y la orden de profundizar en las leyes dependen enteramente del desarrollador que guía a la herramienta.
+            Al encomendarle la generación de la aplicación web, el Agente estructuró rápidamente el entorno con React y Tailwind CSS. Si bien al inicio la IA tendió a resumir los textos legales para priorizar el diseño visual, esto demuestra la verdadera dinámica de trabajo: la IA agiliza enormemente la construcción técnica, pero el criterio analítico, la profundidad legal y las directrices del proyecto dependen enteramente del desarrollador humano que orquesta y guía a la herramienta.
           </p>
         </div>
 
