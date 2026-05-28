@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  FileText, BookOpen, AlertOctagon, Columns, Users, Database, ShieldCheck, Menu, X, Scale, Gavel, MessageSquare, Terminal, LockOpen, Skull, AlertTriangle, Fingerprint, Eye, ServerCrash, Bookmark, Printer
+  FileText, BookOpen, AlertOctagon, Columns, Users, Database, ShieldCheck, Menu, X, Scale, Gavel, MessageSquare, Terminal, LockOpen, Skull, AlertTriangle, Fingerprint, Eye, ServerCrash, Bookmark, Printer, Sun, Moon, Github
 } from 'lucide-react';
 
 // --- COMPONENTES DE CADA SECCIÓN ---
@@ -607,6 +607,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('resumen');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [sysTime, setSysTime] = useState(''); // ESTADO DEL RELOJ
+  const [isDarkMode, setIsDarkMode] = useState(true); 
 
   // EFECTO DEL RELOJ
   useEffect(() => {
@@ -672,16 +673,25 @@ export default function App() {
             <h1 className="text-lg font-bold leading-tight uppercase tracking-wider">Ciberseguridad<br /><span className="text-purple-400">Legal</span></h1>
           </div>
 
-          {/* BOTON IMPRESORA */}
+      {/* BOTONES DE ACCIÓN (TEMA E IMPRESORA) */}
           <div className="flex items-center justify-between mt-2 relative z-10">
             <p className="text-xs text-slate-500 tracking-widest uppercase font-semibold">Expediente T-2021</p>
-            <button
-              onClick={() => window.print()}
-              className="text-slate-500 hover:text-purple-400 transition-colors bg-slate-900 p-1.5 rounded border border-slate-800 hover:border-purple-500/50 flex items-center justify-center"
-              title="Exportar a PDF / Imprimir"
-            >
-              <Printer className="w-4 h-4" />
-            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className="text-slate-500 hover:text-yellow-400 transition-colors bg-slate-900 p-1.5 rounded border border-slate-800 hover:border-yellow-500/50 flex items-center justify-center"
+                title="Cambiar Tema"
+              >
+                {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              </button>
+              <button
+                onClick={() => window.print()}
+                className="text-slate-500 hover:text-purple-400 transition-colors bg-slate-900 p-1.5 rounded border border-slate-800 hover:border-purple-500/50 flex items-center justify-center"
+                title="Exportar a PDF / Imprimir"
+              >
+                <Printer className="w-4 h-4" />
+              </button>
+            </div>
           </div>
 
           {/* RELOJ EN VIVO */}

@@ -39,3 +39,5 @@ comparación de marcos regulatorios (criterio 2.1.3).
 13. Me gustaria agregar un boton para poder pasar a pdf la app que acabamos de realizar, ayudame creando uno en la parte superior del menu
 14. Ahora tambien le quiero agregar la hora en tiempo real
 
+28.05
+15. Necesito realizar varias modificaciones a mi proyecto, dentro de ellas necesito agregar un boton para cambiar el modo oscuro a modo claro de mi pagina, y tambien necesito agregar al finan un enlace para que la persona que vea esto, llegue a mi github que es: https://github.com/Michprogram
