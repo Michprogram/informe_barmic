@@ -44,4 +44,5 @@ comparación de marcos regulatorios (criterio 2.1.3).
 16. ahora mejorando un poco el contenido de mi proyecto, tengo que realizar una mejor version en el contraste de normativas, especificamente la aplicatividad Twitch.
 17. ahora necesito realizar otro ajuste en cuanto al contenido de Comparacion, quiero agregar un eje adicional, ya que mi rubrica dice lo siguiente "Comparación de marcos regulatorios por industria Tabla comparativa con → 3 marcos y → 3 y mi profe hoy me hizo hincapie en que debia poner mas informacion en esta parte.
 18. ya y del lado de las filas podemos agreggar una nueva fila, me gustaria que hablara sobre la iso 27001, con los mismos campos hacia abajo
+19. Para que sea mas interactivo quiero poner una pantalla de bloqueo antes de leer el contenido de mi app, ayudame a realizarla, con un boton para ingresar a esta app. 
 

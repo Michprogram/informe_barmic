@@ -660,6 +660,25 @@ function Prompts() {
                     <span className="text-blue-400 font-bold block mb-1">15.</span>
                     "Necesito realizar varias modificaciones a mi proyecto, dentro de ellas necesito agregar un boton para cambiar el modo oscuro a modo claro de mi pagina, y tambien necesito agregar al finan un enlace para que la persona que vea esto, llegue a mi github que es: https://github.com/Michprogram"
                   </div>
+                  <div className="bg-orange-950/30 p-3 rounded border border-orange-900/50 text-sm text-orange-200 font-mono text-xs leading-relaxed">
+                    <span className="text-orange-500 font-bold block mb-1">16.</span>
+                    "ahora mejorando un poco el contenido de mi proyecto, tengo que realizar una mejor version en el contraste de normativas, especificamente la aplicatividad Twitch."
+                  </div>
+                  <div className="bg-orange-950/30 p-3 rounded border border-orange-900/50 text-sm text-orange-200 font-mono text-xs leading-relaxed">
+                    <span className="text-orange-500 font-bold block mb-1">17.</span>
+                    "ahora necesito realizar otro ajuste en cuanto al contenido de Comparacion, quiero agregar un eje adicional, ya que mi rubrica dice lo siguiente 'Comparación de marcos regulatorios por industria Tabla comparativa con → 3 marcos y → 3' y mi profe hoy me hizo hincapie en que debia poner mas informacion en esta parte."
+                  </div>
+
+                  <div className="bg-orange-950/30 p-3 rounded border border-orange-900/50 text-sm text-orange-200 font-mono text-xs leading-relaxed">
+                    <span className="text-orange-500 font-bold block mb-1">18.</span>
+                    "ya y del lado de las filas podemos agreggar una nueva fila, me gustaria que hablara sobre la iso 27001, con los mismos campos hacia abajo"
+                  </div>
+
+                  <div className="bg-slate-800/80 p-3 rounded border border-blue-900/50 text-sm text-blue-200 font-mono text-xs leading-relaxed">
+                    <span className="text-blue-400 font-bold block mb-1">19.</span>
+                    "Para que sea mas interactivo quiero poner una pantalla de bloqueo antes de leer el contenido de mi app, ayudame a realizarla, con un boton para ingresar a esta app."
+                  </div>
+
                 </div>
               </div>
 
