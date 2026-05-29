@@ -213,12 +213,12 @@ function Comparacion() {
             </tr>
             <tr className="hover:bg-slate-800/50 transition bg-purple-900/10">
               <td className="p-4 font-bold text-purple-300 border-r border-slate-800">Aplicabilidad Twitch</td>
-              <td className="p-4 text-slate-300 border-r border-slate-800">Art. 11 y 23 (Ley 19.628): 
-Infracción directa al deber de cuidado. Obligación legal de indemnizar a los creadores chilenos por exponer su historial de ganancias (dato patrimonial), dejándolos vulnerables a perfilamiento económico y extorsiones.</td>
+              <td className="p-4 text-slate-300 border-r border-slate-800">Art. 11 y 23 (Ley 19.628):
+                Infracción directa al deber de cuidado. Obligación legal de indemnizar a los creadores chilenos por exponer su historial de ganancias (dato patrimonial), dejándolos vulnerables a perfilamiento económico y extorsiones.</td>
               <td className="p-4 text-slate-300 border-r border-slate-800">Art. 32 y 83 (GDPR):
-Sanción por violar el principio de resiliencia de los sistemas. La plataforma arriesga multas punitivas de hasta el 4% de su facturación global anual por la exposición sistémica de usuarios europeos.</td>
+                Sanción por violar el principio de resiliencia de los sistemas. La plataforma arriesga multas punitivas de hasta el 4% de su facturación global anual por la exposición sistémica de usuarios europeos.</td>
               <td className="p-4 text-slate-300 bg-indigo-950/10">&gt; Requisito 1 (PCI-DSS):
-Falla crítica de arquitectura. La falta de micro-segmentación permitió que el entorno de tarjetas (CDE) estuviera en la misma red vulnerada que el código fuente, arriesgando la revocación para procesar pagos.</td>
+                Falla crítica de arquitectura. La falta de micro-segmentación permitió que el entorno de tarjetas (CDE) estuviera en la misma red vulnerada que el código fuente, arriesgando la revocación para procesar pagos.</td>
             </tr>
           </tbody>
         </table>
@@ -309,9 +309,9 @@ function Responsabilidades() {
           </div>
         </div>
 
-      
-      
-      {/* 4chan */}
+
+
+        {/* 4chan */}
         <div className="bg-slate-900 rounded-lg border border-teal-900 shadow-lg flex flex-col overflow-hidden relative hover:border-teal-500/50 transition-colors">
           <div className="absolute top-2 right-2"><MessageSquare className="text-teal-500/20 w-12 h-12" /></div>
           <div className="bg-teal-950 p-4 border-b border-teal-800">
@@ -334,8 +334,8 @@ function Responsabilidades() {
           </div>
         </div>
 
+      </div>
     </div>
-  </div>
   );
 }
 
@@ -511,8 +511,8 @@ function Referencias() {
 }
 
 function Prompts() {
-const [isHistoryOpen, setIsHistoryOpen] = useState(false); 
-return (
+  const [isHistoryOpen, setIsHistoryOpen] = useState(false);
+  return (
     <div className="space-y-6 animate-fade-in text-slate-300">
       <div className="flex items-center gap-3 border-b border-purple-800/50 pb-4">
         <MessageSquare className="text-pink-500 w-8 h-8" />
@@ -525,7 +525,7 @@ return (
         <div className="bg-black p-6 rounded-lg border border-pink-900 shadow-[inset_0_0_20px_rgba(236,72,153,0.15)]">
           <h3 className="font-bold text-pink-400 mb-3 text-lg font-mono">&gt; Sys.Role(Gemini_Dev_Agent)</h3>
           <p className="text-slate-300 text-sm leading-relaxed mb-3">
-            Para el desarrollo de esta evaluación, <strong className="text-white">Google Gemini NO fue utilizado como un simple "chatbot" conversacional</strong> de preguntas y respuestas, sino que se integró a lo largo de múltiples sesiones como un <strong className="text-white">Agente de Desarrollo (Dev Agent)</strong> interactivo.
+            Para el desarrollo de esta evaluación, <strong className="text-white">Google Gemini </strong>se integró a lo largo de múltiples sesiones como un <strong className="text-white">Agente de Desarrollo (Dev Agent)</strong> interactivo.
           </p>
           <p className="text-slate-300 text-sm leading-relaxed">
             El Agente operó de manera integral cruzando dominios: partió investigando y aplicando el marco legal chileno (Leyes 21.459 y 19.628) sobre el caso internacional de Twitch. Posteriormente, evolucionó para estructurar la arquitectura local en Vite, inyectar dependencias, generar la maquetación en React + Tailwind CSS, integrar hooks de estado (reloj en vivo, dark mode), y depurar errores de sintaxis y despliegue (CI/CD) directo a Vercel.
@@ -534,7 +534,7 @@ return (
 
         {/* Menú Desplegable de Prompts */}
         <div className="bg-slate-900 p-6 rounded-lg border border-purple-900/30 shadow-lg transition-all duration-300">
-          <button 
+          <button
             onClick={() => setIsHistoryOpen(!isHistoryOpen)}
             className="w-full flex items-center justify-between cursor-pointer group outline-none"
           >
@@ -548,7 +548,7 @@ return (
 
           {isHistoryOpen && (
             <div className="mt-6 space-y-8 animate-fade-in border-t border-slate-800 pt-6">
-              
+
               {/* DIA 14.05 */}
               <div>
                 <h4 className="font-bold text-white mb-3 flex items-center gap-2">
@@ -653,7 +653,7 @@ return (
           )}
         </div>
 
-{/* Sección de Intervención Humana (Correcciones) */}
+        {/* Sección de Intervención Humana (Correcciones) */}
         <div className="bg-slate-900 p-6 rounded-lg border border-orange-900/30 shadow-lg">
           <h3 className="font-bold text-lg text-orange-400 mb-4 border-b border-slate-700 pb-2 font-mono">&gt; Intervención Humana y Correcciones</h3>
           <ul className="space-y-4 text-sm text-slate-400">
@@ -694,7 +694,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('resumen');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [sysTime, setSysTime] = useState(''); // ESTADO DEL RELOJ
-  const [isDarkMode, setIsDarkMode] = useState(true); 
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // EFECTO DEL RELOJ
   useEffect(() => {
@@ -731,9 +731,9 @@ export default function App() {
     }
   };
 
-return (
+  return (
     <div className={`min-h-screen bg-slate-950 flex flex-col md:flex-row font-sans selection:bg-purple-500/30 transition-all duration-500 ${!isDarkMode ? 'invert hue-rotate-180' : ''}`}>
-      
+
       {/* Botón menú móvil */}
       <div className="md:hidden bg-black border-b border-purple-900/50 text-white p-4 flex justify-between items-center shadow-md z-20">
         <div className="flex items-center gap-2">
@@ -760,7 +760,7 @@ return (
             <h1 className="text-lg font-bold leading-tight uppercase tracking-wider">Ciberseguridad<br /><span className="text-purple-400">Legal</span></h1>
           </div>
 
-      {/* BOTONES DE ACCIÓN (TEMA E IMPRESORA) */}
+          {/* BOTONES DE ACCIÓN (TEMA E IMPRESORA) */}
           <div className="flex items-center justify-between mt-2 relative z-10">
             <p className="text-xs text-slate-500 tracking-widest uppercase font-semibold">Expediente T-2021</p>
             <div className="flex gap-2">
@@ -832,10 +832,10 @@ return (
         {/* Footer */}
         <footer className="max-w-4xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-600 font-mono tracking-widest uppercase">
           <span>Agente: Michele Barriga</span>
-          
-          <a 
-            href="https://github.com/Michprogram" 
-            target="_blank" 
+
+          <a
+            href="https://github.com/Michprogram"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-purple-400 transition-colors bg-slate-900/50 px-3 py-1.5 rounded border border-slate-800 hover:border-purple-500/50"
           >
