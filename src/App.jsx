@@ -190,6 +190,7 @@ function Comparacion() {
               <th className="p-4 font-semibold uppercase text-xs tracking-wider border-r border-slate-800">Ley 19.628 (Chile)</th>
               <th className="p-4 font-semibold uppercase text-xs tracking-wider border-r border-slate-800">GDPR (Europa)</th>
               <th className="p-4 font-semibold text-indigo-400 uppercase text-xs tracking-wider">PCI-DSS (Pagos)</th>
+              <th className="p-4 font-semibold text-sky-400 uppercase text-xs tracking-wider">ISO 27001 (SGSI)</th>
             </tr>
           </thead>
           <tbody className="text-sm">
@@ -198,18 +199,21 @@ function Comparacion() {
               <td className="p-4 text-slate-400 border-r border-slate-800">Territorial. Aplica a bases de datos alojadas en Chile.</td>
               <td className="p-4 text-slate-400 border-r border-slate-800">Extraterritorial. Aplica si el usuario es ciudadano de la UE.</td>
               <td className="p-4 text-slate-400 bg-indigo-950/10">Específico por contrato para procesadores de tarjetas.</td>
+              <td className="p-4 text-slate-400 bg-sky-950/10">Global. Estándar certificable exigido corporativamente.</td>
             </tr>
             <tr className="border-b border-slate-800 hover:bg-slate-800/50 transition">
               <td className="p-4 font-bold text-slate-300 border-r border-slate-800">Notificación Brechas</td>
               <td className="p-4 text-red-400 font-medium border-r border-slate-800">No obligatoria en ley actual. Deja usuarios en indefensión.</td>
               <td className="p-4 text-emerald-400 font-medium border-r border-slate-800">Plazo máximo 72 horas para notificar a la autoridad.</td>
               <td className="p-4 text-emerald-400 font-medium bg-indigo-950/10">Alerta inmediata a bancos adquirentes y marcas.</td>
+              <td className="p-4 text-emerald-400 font-medium bg-sky-950/10">Obliga a tener un proceso formal de reporte de incidentes.</td>
             </tr>
             <tr className="border-b border-slate-800 hover:bg-slate-800/50 transition">
               <td className="p-4 font-bold text-slate-300 border-r border-slate-800">Seguridad Exigida</td>
               <td className="p-4 text-slate-400 border-r border-slate-800">Menciona el "debido cuidado", sin controles criptográficos.</td>
               <td className="p-4 text-slate-400 border-r border-slate-800">Medidas acordes al riesgo (cifrado, seudonimización).</td>
               <td className="p-4 text-slate-400 bg-indigo-950/10">Micro-segmentación, Pentesting, MFA obligatorio.</td>
+              <td className="p-4 text-slate-400 bg-sky-950/10">Exige un Sistema de Gestión (SGSI) y análisis de riesgos continuo.</td>
             </tr>
 
             <tr className="border-b border-slate-800 hover:bg-slate-800/50 transition">
@@ -217,6 +221,7 @@ function Comparacion() {
               <td className="p-4 text-slate-400 border-r border-slate-800">Multas económicas moderadas (en UTM) e indemnización por daños.</td>
               <td className="p-4 text-slate-400 border-r border-slate-800">Multas severas: hasta 20 millones de euros o 4% de la facturación global.</td>
               <td className="p-4 text-slate-400 bg-indigo-950/10">Multas mensuales (hasta $100k USD) y revocación para procesar tarjetas.</td>
+              <td className="p-4 text-slate-400 bg-sky-950/10">Pérdida de certificación, fuga de clientes e impacto reputacional.</td>
             </tr>
 
             <tr className="hover:bg-slate-800/50 transition bg-purple-900/10">
@@ -227,6 +232,7 @@ function Comparacion() {
                 Sanción por violar el principio de resiliencia de los sistemas. La plataforma arriesga multas punitivas de hasta el 4% de su facturación global anual por la exposición sistémica de usuarios europeos.</td>
               <td className="p-4 text-slate-300 bg-indigo-950/10">&gt; Requisito 1 (PCI-DSS):
                 Falla crítica de arquitectura. La falta de micro-segmentación permitió que el entorno de tarjetas (CDE) estuviera en la misma red vulnerada que el código fuente, arriesgando la revocación para procesar pagos.</td>
+              <td className="p-4 text-slate-300 bg-sky-950/10">&gt; Control A.14: Ausencia de desarrollo seguro. Exponer el código fuente y las ganancias evidencia fallas graves en la protección de los sistemas.</td>
             </tr>
           </tbody>
         </table>
