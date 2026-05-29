@@ -211,6 +211,14 @@ function Comparacion() {
               <td className="p-4 text-slate-400 border-r border-slate-800">Medidas acordes al riesgo (cifrado, seudonimización).</td>
               <td className="p-4 text-slate-400 bg-indigo-950/10">Micro-segmentación, Pentesting, MFA obligatorio.</td>
             </tr>
+
+            <tr className="border-b border-slate-800 hover:bg-slate-800/50 transition">
+              <td className="p-4 font-bold text-slate-300 border-r border-slate-800">Sanciones y Multas</td>
+              <td className="p-4 text-slate-400 border-r border-slate-800">Multas económicas moderadas (en UTM) e indemnización por daños.</td>
+              <td className="p-4 text-slate-400 border-r border-slate-800">Multas severas: hasta 20 millones de euros o 4% de la facturación global.</td>
+              <td className="p-4 text-slate-400 bg-indigo-950/10">Multas mensuales (hasta $100k USD) y revocación para procesar tarjetas.</td>
+            </tr>
+
             <tr className="hover:bg-slate-800/50 transition bg-purple-900/10">
               <td className="p-4 font-bold text-purple-300 border-r border-slate-800">Aplicabilidad Twitch</td>
               <td className="p-4 text-slate-300 border-r border-slate-800">Art. 11 y 23 (Ley 19.628):
