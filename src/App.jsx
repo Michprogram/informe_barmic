@@ -709,6 +709,57 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [sysTime, setSysTime] = useState(''); // ESTADO DEL RELOJ
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isAuthorized, setIsAuthorized] = useState(false);
+
+  function LockScreen({ onUnlock }) {
+    const [granting, setGranting] = useState(false);
+
+    const handleUnlock = () => {
+      setGranting(true);
+      // Simula un proceso de desencriptación de 2 segundos
+      setTimeout(() => {
+        onUnlock();
+      }, 2000);
+    };
+
+    return (
+      <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center p-4 font-mono selection:bg-emerald-500/30">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-900/10 via-black to-black opacity-50"></div>
+
+        <div className="relative z-10 flex flex-col items-center">
+          <ShieldCheck className={`w-20 h-20 md:w-24 md:h-24 mb-6 transition-colors duration-500 ${granting ? 'text-emerald-500 animate-pulse' : 'text-red-600'}`} />
+
+          <h1 className="text-2xl md:text-4xl font-bold tracking-[0.3em] mb-2 text-center text-white">
+            SISTEMA CIBER-LEGAL
+          </h1>
+
+          <p className="text-red-500 tracking-widest mb-10 text-xs md:text-sm animate-pulse border border-red-900/50 bg-red-950/20 px-4 py-1.5 rounded">
+            STATUS: CLASIFICADO / REQUIERE AUTORIZACIÓN
+          </p>
+
+          {!granting ? (
+            <button
+              onClick={handleUnlock}
+              className="border border-emerald-600 text-emerald-500 hover:bg-emerald-950 hover:text-emerald-400 hover:border-emerald-400 px-8 py-3 uppercase tracking-widest text-xs md:text-sm font-bold transition-all shadow-[0_0_15px_rgba(5,150,105,0.2)] hover:shadow-[0_0_25px_rgba(5,150,105,0.5)]"
+            >
+              &gt; Iniciar Desencriptación_
+            </button>
+          ) : (
+            <div className="flex flex-col items-center w-full max-w-xs mt-2">
+              <p className="text-emerald-400 mb-3 text-xs tracking-widest uppercase font-bold animate-pulse">
+                Validando Credenciales...
+              </p>
+              <div className="w-full h-1 bg-slate-900 overflow-hidden relative rounded">
+                <div className="absolute top-0 left-0 h-full bg-emerald-500 animate-[ping_1.5s_ease-in-out_infinite] w-full opacity-75"></div>
+                <div className="h-full bg-emerald-400 w-full"></div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
 
   // EFECTO DEL RELOJ
   useEffect(() => {
@@ -744,6 +795,10 @@ export default function App() {
       default: return <Resumen />;
     }
   };
+
+  if (!isAuthorized) {
+    return <LockScreen onUnlock={() => setIsAuthorized(true)} />;
+  }
 
   return (
     <div className={`min-h-screen bg-slate-950 flex flex-col md:flex-row font-sans selection:bg-purple-500/30 transition-all duration-500 ${!isDarkMode ? 'invert hue-rotate-180' : ''}`}>
