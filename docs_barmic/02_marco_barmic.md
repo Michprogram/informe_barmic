@@ -18,5 +18,8 @@ Es el estándar internacional más estricto y de mayor alcance global en cuanto 
 Es la principal ley federal estadounidense que persigue el fraude y el abuso informático.
 * **Justificación:** Al ser Twitch una filial de Amazon (empresa estadounidense) y encontrarse gran parte de su infraestructura en servidores de AWS en ese país, esta ley es la que rige la persecución directa del atacante anónimo. Prohíbe el acceso a una computadora sin autorización o excediendo el acceso permitido para obtener información comercial confidencial.
 
+## 5. Norma ISO/IEC 27001 (Estándar Internacional de Industria)
+Es el estándar mundial referente a los Sistemas de Gestión de Seguridad de la Información (SGSI).
+* **Justificación:** Aunque no es una ley estatal sancionatoria, es el marco regulatorio por industria más reconocido para la ciberseguridad. En este caso se aplica para demostrar que Twitch falló en implementar controles técnicos básicos exigidos por la industria (como la correcta configuración en la nube AWS y la segmentación de redes), negligencia que derivó directamente en la filtración de los 125 GB.
 ---
 *Este marco normativo permite un análisis integral: desde la sanción penal al atacante hasta la responsabilidad civil y administrativa de la plataforma en el manejo de la información sensible.*

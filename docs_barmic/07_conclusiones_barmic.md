@@ -12,6 +12,7 @@ Para prevenir incidentes similares y mitigar el impacto de una brecha de datos, 
 * **Cifrado de Datos en Reposo y en Tránsito:** Asegurar que toda la información financiera y personal sensible esté cifrada bajo estándares robustos (AES-256), de modo que, si los datos son extraídos, resulten ilegibles e inútiles para el atacante.
 
 ### 2. Medidas Organizativas (Gobernanza)
+* **Implementación de un SGSI (ISO 27001):** Adoptar formalmente un Sistema de Gestión de Seguridad de la Información (SGSI) que garantice auditorías preventivas constantes y un ciclo de mejora continua en los controles de acceso institucionales.
 * **Plan de Respuesta ante Incidentes (IRP):** Actualizar los protocolos de comunicación para cumplir con plazos de notificación internacionales (como las 72 horas del GDPR), permitiendo que los usuarios afectados tomen medidas preventivas (cambio de contraseñas, monitoreo bancario) rápidamente.
 * **Auditorías de Terceros y Pentesting:** Realizar pruebas de penetración periódicas enfocadas específicamente en la seguridad de la cadena de suministro y en la protección de la propiedad intelectual (código fuente).
 
