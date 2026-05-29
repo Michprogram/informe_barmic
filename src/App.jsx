@@ -226,9 +226,9 @@ function Comparacion() {
 
             <tr className="hover:bg-slate-800/50 transition bg-purple-900/10">
               <td className="p-4 font-bold text-purple-300 border-r border-slate-800">Aplicabilidad Twitch</td>
-              <td className="p-4 text-slate-300 border-r border-slate-800">Art. 11 y 23 (Ley 19.628):
+              <td className="p-4 text-slate-300 border-r border-slate-800">&gt;Art. 11 y 23 (Ley 19.628):
                 Infracción directa al deber de cuidado. Obligación legal de indemnizar a los creadores chilenos por exponer su historial de ganancias (dato patrimonial), dejándolos vulnerables a perfilamiento económico y extorsiones.</td>
-              <td className="p-4 text-slate-300 border-r border-slate-800">Art. 32 y 83 (GDPR):
+              <td className="p-4 text-slate-300 border-r border-slate-800">&gt;Art. 32 y 83 (GDPR):
                 Sanción por violar el principio de resiliencia de los sistemas. La plataforma arriesga multas punitivas de hasta el 4% de su facturación global anual por la exposición sistémica de usuarios europeos.</td>
               <td className="p-4 text-slate-300 bg-indigo-950/10">&gt; Requisito 1 (PCI-DSS):
                 Falla crítica de arquitectura. La falta de micro-segmentación permitió que el entorno de tarjetas (CDE) estuviera en la misma red vulnerada que el código fuente, arriesgando la revocación para procesar pagos.</td>
